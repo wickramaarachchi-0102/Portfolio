@@ -1,0 +1,175 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+nav {
+    background: #2c3e50;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li { margin: 0 15px; }
+
+/* FIX: This makes the links white */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active { color: #3498db; }
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-card {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hidden { display: none; }
+/* About Page Specific Styles */
+.about-page {
+    text-align: center; /* Aligns content to the center */
+    padding: 3rem 2rem;
+}
+
+.creative-title {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Primary dark color */
+    margin-bottom: 40px; /* Creates the space between heading and paragraph */
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Adds a creative colored underline */
+.creative-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Centers the paragraph and adds bottom space */
+    color: #555;
+    line-height: 1.8;
+}
+
+.info-grid {
+    background: #fdfdfd;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.info-grid p {
+    margin: 10px 0;
+}
+/* Home Page Specific Styles */
+.home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh; /* Gives the home page a tall, spacious feel */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px; /* Space between title and subtitle */
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero-title .highlight {
+    color: #3498db; /* The creative color for the heading */
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centered and space below it */
+    font-weight: 300;
+}
+
+/* Button Styling Improvements */
+.cta-area {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #3498db;
+    color: #3498db;
+}
+
+.btn-outline:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsive adjustments for the big title */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .cta-area {
+        flex-direction: column;
+        align-items: center;
+    }
+}
